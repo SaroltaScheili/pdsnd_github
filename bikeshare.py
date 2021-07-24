@@ -2,11 +2,13 @@ import time
 import pandas as pd
 import datetime
 
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
 HINT = "Hint: it is enough to write the first couple of characters, and case-insensitive answer is also accepted."
+
 
 QUESTION_DATA = {
     "city":        {"question": "Please select a city from the following list:", 
@@ -186,12 +188,12 @@ def trip_duration_stats(df):
     
     # TO DO: display total travel time
     trip_sum = df['Trip Duration'].sum()
-    print(f'Total travel time: {trip_sum} seconds, that is {str(datetime.timedelta(seconds=trip_sum.item()))}')
+    print(f'Total Travel Time: {trip_sum} seconds, that is {str(datetime.timedelta(seconds=trip_sum.item()))}')
 
 
     # TO DO: display mean travel time
     trip_mean = df['Trip Duration'].mean()
-    print(f'Mean travel time: {trip_mean:.2f} seconds')
+    print(f'Mean Travel Time: {trip_mean:.2f} seconds')
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -205,12 +207,12 @@ def user_stats(df):
     start_time = time.time()
 
     # TO DO: Display counts of user types
-    print('Counts of user types')
+    print('Counts of User Types')
     print(df['User Type'].value_counts(), "\n")
 
     # TO DO: Display counts of gender
     if "Gender" in df.columns:
-        print('Counts of gender:')
+        print('Counts of Gender:')
         print(df['Gender'].value_counts())
     else:
         print("Gender information is not available.")
@@ -232,7 +234,8 @@ def user_stats(df):
 def display_raw_data(city):
     """
     Display the raw data by five rows.
-    After displaying the 5 rows, the user can decide to continue or to interrupt the displaying.
+    After displaying the 5 rows, the user can decide to continue
+    or to interrupt the displaying.
     """
     answer = input(f'If you like to display the raw data of {city}, plaese type yes or y: ')
     if answer.lower() not in ('yes', 'y'):
