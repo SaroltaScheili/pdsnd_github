@@ -151,7 +151,7 @@ def time_stats(df):
     print('Most common start hour:', df['hour'].mode()[0])
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took {:.4f} seconds.".format(time.time() - start_time))
     print_separator()
 
 
@@ -175,7 +175,7 @@ def station_stats(df):
           df['Start End'].value_counts().max())
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took {:.4f} seconds.".format(time.time() - start_time))
     print_separator()
 
 
@@ -196,7 +196,7 @@ def trip_duration_stats(df):
     print(f'Mean Travel Time: {trip_mean:.2f} seconds')
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took {:.4f} seconds.".format(time.time() - start_time))
     print_separator()
 
 
@@ -227,13 +227,13 @@ def user_stats(df):
     else:
         print("Birth of year is not available.", "\n")
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took {:.4f} seconds.".format(time.time() - start_time))
     print_separator()
     
 
 def display_raw_data(city):
     """
-    Display the raw data by five rows.
+    Display the raw data by five rows for the specified city.
     After displaying the 5 rows, the user can decide to continue
     or to interrupt the displaying.
     """
