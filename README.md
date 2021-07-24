@@ -5,7 +5,7 @@
 Explore bike share data in python
 
 ### Description
-Explore the data related to the bike share system for three major cities in the USA -
+Explore the data related to the bike share system for three major cities in the USA:
 Chicao, New York City and Washington
 
 #### Prerequisites:
@@ -52,11 +52,11 @@ Since the months March and May both start with "M", the program
 is not able the identify unambigously which month to select, so
 in this case type a longer answer, for example Mar for March.
 
-### Files used
+### File used
 bikeshare.py
 
 ### Credits
-https://devguide.python.org/
-https://pandas.pydata.org/
+- https://devguide.python.org/
+- https://pandas.pydata.org/
 
 
