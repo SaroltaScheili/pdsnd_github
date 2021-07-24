@@ -231,7 +231,7 @@ def user_stats(df):
 
 def display_raw_data(city):
     """
-    Display the raw data by five rows.
+    Display the raw data by five rows for the specified city.
     After displaying the 5 rows, the user can decide to continue or to interrupt the displaying.
     """
     answer = input(f'If you like to display the raw data of {city}, plaese type yes or y: ')
